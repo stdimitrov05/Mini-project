@@ -6,7 +6,7 @@ include('database.php') ?>
 
 <head>
           <title>Registration system </title>
-          <link rel="stylesheet" type="text/css" href="./styles/global.scss">
+          <link rel="stylesheet" type="text/css" href="./style/global.scss">
 </head>
 
 <body>
