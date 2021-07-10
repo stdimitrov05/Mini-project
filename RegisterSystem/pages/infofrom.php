@@ -1,12 +1,12 @@
 <?php
 error_reporting(E_ALL & ~E_NOTICE);
-include('database.php') ?>
+include('../db/database.php') ?>
 <!DOCTYPE html>
 <html>
 
 <head>
           <title>Registration system </title>
-          <link rel="stylesheet" type="text/css" href="./styles/global.scss">
+          <link rel="stylesheet" type="text/css" href="../style/global.scss">
 </head>
 
 <body>
@@ -15,7 +15,7 @@ include('database.php') ?>
           </div>
 
           <form method="post" action="infofrom.php">
-                    <?php include('error.php'); ?>
+                    <?php include('../errors/error.php'); ?>
                     
                     <div class="input-group">
                               <label>Fistname</label>
@@ -39,7 +39,7 @@ include('database.php') ?>
                     </div>
                     <div>
                               Already have an account?
-                              <a class="right" href="loginpage.php">Login</a>
+                              <a class="right" href="../pages/loginpage.php">Login</a>
                     </div>
           </form>
 </body>

@@ -1,4 +1,4 @@
- <?php include('login.php') ?>
+ <?php include('../Login/login.php') ?>
  <!DOCTYPE html>
  <html lang="en">
 
@@ -43,7 +43,7 @@
                                <div class="form-group">
                                          <button type="submit" class="btn" name="login">Login</button>
                                </div>
-                               <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
+                               <p>Don't have an account? <a href="./register.php">Sign up now</a>.</p>
                      </form>
            </div>
  </body>

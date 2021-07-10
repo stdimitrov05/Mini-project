@@ -85,7 +85,7 @@ if ($connect) {
             $Info = "INSERT INTO clientinfo  (firstname,lastName, age, adress)
                           VALUES('$firstName','$lastName', '$age', '$adress' )";
             mysqli_query($connect, $Info);
-            header('Location: page.php');
+            header('Location: pages/page.php');
         }
       
 }
