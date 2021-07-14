@@ -1,51 +1,48 @@
- <?php include('../Login/login.php') ?>
- <!DOCTYPE html>
- <html lang="en">
+<?php
+error_reporting(E_ALL & ~E_NOTICE);
+include('../db/database.php') ?>
+<!DOCTYPE html>
+<html lang="en">
 
- <head>
-           <meta charset="UTF-8">
-           <title>Login</title>
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+          <style>
+                    input[type=text] {
+                              width: 25%;
+                              padding: 10px 20px;
+                              margin: 5px 0;
+                              border: 1px solid black;
+                    }
 
-           <style>
-                     body {
-                               font: 14px sans-serif;
-                     }
+                    input[type=submit] {
+                              width: 10%;
+                              padding: 12px 20px;
+                              border: 1px solid #555;
+                              background-color: green;
+                              color: white;
 
-                     .wrapper {
-                               width: 360px;
-                               padding: 20px;
-                     }
-           </style>
- </head>
+                    }
+          </style>
+</head>
+<html>
 
- <body>
-           <div class="wrapper">
-                     <h2>Login</h2>
-                     <p>Please fill in your credentials to login.</p>
+<body>
+          <center>
 
-                     <?php
-                              if (!empty($login_err)) {
-                                        echo '<div class="alert alert-danger">' . $login_err . '</div>';
-                              }
-                              ?>
-                     <br>
-                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                               <div class="form-group">
-                                         <label>Username</label>
-                                         <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
-                                         <span class="invalid-feedback"><?php echo $username_err; ?></span>
-                               </div>
-                               <div class="form-group">
-                                         <label>Password</label>
-                                         <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
-                                         <span class="invalid-feedback"><?php echo $password_err; ?></span>
-                               </div>
-                               <div class="form-group">
-                                         <button type="submit" class="btn" name="login">Login</button>
-                               </div>
-                               <p>Don't have an account? <a href="./register.php">Sign up now</a>.</p>
-                     </form>
-           </div>
- </body>
+                    <form action="loginpage.php" method="POST">
 
- </html>
+                              <b>Username:-</b><input type="text" name="name" required=""><br><br>
+
+                              <b>Password:-</b><input type="text" name="password" required=""><br><br>
+                              <b>Email:-</b><input type="text" name="email" required=""><br><br>
+
+                              <input type="submit" name="Login" value="Login">
+
+                              <form>
+</body>
+</center>
+
+</html>

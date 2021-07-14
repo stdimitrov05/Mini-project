@@ -11,28 +11,23 @@ if ($connect) {
     if (isset($_POST['registerNewUser'])) {
         // receive all input values from the register.php form
         $username = mysqli_real_escape_string($connect, $_POST['username']);
-        $nickname = mysqli_real_escape_string($connect, $_POST['username']);
+        $nickname = mysqli_real_escape_string($connect, $_POST['nickname']);
         $email = mysqli_real_escape_string($connect, $_POST['email']);
         $password = mysqli_real_escape_string($connect, $_POST['password']);
         $confirm_password = mysqli_real_escape_string($connect, $_POST['confirm_password']);
-        $date = date('Y-m-d H:i:s'); 
-    
+        $date = date('Y-m-d H:i:s');
+
 
         // by using array_push() corresponding errors in $errors() which is an array of errors.
         if (empty($username)) {
             array_push($errors, "Username is required");
-        }
-        else if
-        (empty($nickname)) {
+        } else if (empty($nickname)) {
             array_push($errors, "Nickname is required");
-        }
-      else if (empty($email)) {
+        } else if (empty($email)) {
             array_push($errors, "Email is required");
-        }
-      else  if (empty($password)) {
+        } else  if (empty($password)) {
             array_push($errors, "Password is required");
-        }
-     else  if ($password != $confirm_password) {
+        } else  if ($password != $confirm_password) {
             array_push($errors, "Failed to Match");
         }
         //fistly check in database that a user does not already exist with the same username and/or email.
@@ -52,40 +47,58 @@ if ($connect) {
 
         // Finally, register user if no error
         if (count($errors) == 0) {
-            $pwd = $password; //random code with md5()
+            $pwd = md5($password); //random code with md5()
 
             $register = "INSERT INTO clients (nickname,username, email, password,date)
                           VALUES('$nickname','$username', '$email', '$pwd' , '$date')";
             mysqli_query($connect, $register);
             header('Location: infofrom.php');
         }
-        
-        }
     }
-    if (isset($_POST['InfoFrom'])) {
-        // receive all input values from the register.php form
-        $firstName = mysqli_real_escape_string($connect, $_POST['firstName']);
-        $lastName = mysqli_real_escape_string($connect, $_POST['lastName']);
-        $age = mysqli_real_escape_string($connect, $_POST['age']);
-        $adress = mysqli_real_escape_string($connect, $_POST['adress']);
+}
+if (isset($_POST['InfoFrom'])) {
+    // receive all input values from the register.php form
+    $firstName = mysqli_real_escape_string($connect, $_POST['firstName']);
+    $lastName = mysqli_real_escape_string($connect, $_POST['lastName']);
+    $age = mysqli_real_escape_string($connect, $_POST['age']);
+    $adress = mysqli_real_escape_string($connect, $_POST['adress']);
 
-        // by using array_push() corresponding errors in $errors() which is an array of errors.
-        if (empty($firstName)) {
-            array_push($errors, "FirstName is required");
-        } else if (empty($lastName)) {
-            array_push($errors, "LastName  is required");
-        } else if (empty($age)) {
-            array_push($errors, "Age is required");
-        } else  if (empty($adress)) {
-            array_push($errors, "Adress is required");
-        }
-//
-        if (count($errors) == 0) {
+    // by using array_push() corresponding errors in $errors() which is an array of errors.
+    if (empty($firstName)) {
+        array_push($errors, "FirstName is required");
+    } else if (empty($lastName)) {
+        array_push($errors, "LastName  is required");
+    } else if (empty($age)) {
+        array_push($errors, "Age is required");
+    } else  if (empty($adress)) {
+        array_push($errors, "Adress is required");
+    }
+    //
+    if (count($errors) == 0) {
 
-            $Info = "INSERT INTO clientinfo  (firstname,lastName, age, adress)
+        $Info = "INSERT INTO clientinfo  (firstname,lastName, age, adress)
                           VALUES('$firstName','$lastName', '$age', '$adress' )";
-            mysqli_query($connect, $Info);
-            header('Location: pages/page.php');
-        }
-      
+        mysqli_query($connect, $Info);
+        header('Location:/WorkList/RegisterSystem/pages/page.php');
+    }
+}
+if (isset($_POST['Login'])) {
+    $name = mysqli_real_escape_string($connect, $_POST['name']);
+    $password = mysqli_real_escape_string($connect, $_POST['password']);
+    $email = mysqli_real_escape_string($connect, $_POST['email']);
+
+    if (empty($name)) {
+        array_push($errors, "Name is required");
+    } else  if (empty($password)) {
+        array_push($errors, "Password is required");
+    } else if (empty($email)) {
+        array_push($errors, "Email is required");
+    }
+
+    if (count($errors) == 0) {
+
+        $Login = "Select * from clients where name={$name} and password={$password} and email = {$email}";
+        mysqli_query($connect, $Login);
+        header('Location: /WorkList/RegisterSystem/pages/page.php');
+    }
 }
