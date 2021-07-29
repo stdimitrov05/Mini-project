@@ -81,7 +81,7 @@ if (isset($_POST['InfoFrom'])) {
     if (count($errors) == 0) {
         /* INSERT INTO pictures VALUES(1, LOAD_FILE('d:\\flower.gif')); */
         $Info = "INSERT INTO clientinfo  (firstname,lastName, age, adress,image)
-                          VALUES('$firstName','$lastName', '$age', '$adress', '($image)' )";
+                          VALUES('$firstName','$lastName', '$age', '$adress', '$image' )";
 
         mysqli_query($connect, $Info);
         header('Location:/WorkList/App/pages/page.php');
@@ -109,13 +109,16 @@ if (isset($_POST['Login'])) {
 }
 else if (isset($_POST['upload'])) { // If isset upload button or not
 	// Declaring Variables
-    $date = date('Y-m-d H:i:s');
+    $file_info = mysqli_real_escape_string($connect ,$_POST['file_info']);
 	$location = "../uploads/";
 	$file_new_name = date("dmy") . time() . $_FILES["file"]["name"]; // New and unique name of uploaded file
 	$file_name = $_FILES["file"]["name"]; // Get uploaded file name
 	$file_temp = $_FILES["file"]["tmp_name"]; // Get uploaded file temp
 	$file_size = $_FILES["file"]["size"]; // Get uploaded file size
 
+    if(empty($file_info)){
+        array_push($errors, "File info is required");
+    }
 	/*
 	How we can get mb from bytes
 	(mb*1024)*1024
@@ -127,8 +130,8 @@ else if (isset($_POST['upload'])) { // If isset upload button or not
 	if ($file_size > 10485760) { // Check file size 10mb or not
 		echo "<script>alert('Woops! File is too big. Maximum file size allowed for upload 10 MB.')</script>";
 	} else {
-		$sql = "INSERT INTO uploaded_files (name, new_name)
-				VALUES ('$file_name', '$file_new_name')";
+		$sql = "INSERT INTO uploaded_files (name, new_name , fileInfo)
+				VALUES ('$file_name', '$file_new_name' ,'$file_info')";
 		$result = mysqli_query($connect, $sql);
 		if ($result) {
 			move_uploaded_file($file_temp, $location . $file_new_name);

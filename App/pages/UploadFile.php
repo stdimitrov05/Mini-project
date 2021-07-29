@@ -22,7 +22,7 @@ include('../db/database.php') ?>
                     </div>
                     <form action="" method="POST" enctype="multipart/form-data" class="body">
                               <!-- Sharable Link Code -->
-                              <input type="date_timezone_get" name="date" require  placeholder="Today's date :">
+                              <input type="text" name="file_info"  require placeholder="File info: ">
                               <input type="file" name="file" id="upload" required>
                               <label for="upload">
                                         <i class="fa fa-file-text-o fa-3x"></i>
