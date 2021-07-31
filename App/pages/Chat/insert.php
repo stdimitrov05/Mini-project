@@ -2,7 +2,8 @@
 $name     = $_POST['name'];
 $email    = $_POST['email'];
 $country  = $_POST['country'];
-$password = md5($_POST['pass1']);
+$password = $_POST['pass1'];
+
 
 include_once('config.php');
 $result = mysqli_query($conn, "INSERT INTO `logsystem`.`user`

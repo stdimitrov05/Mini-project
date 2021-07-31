@@ -1,0 +1,14 @@
+.navigator-tab {
+          width: 100%;
+          background-color: #e20000;
+          display: block;
+          position: relative;
+          margin-bottom: 2.5%;
+          margin-right: auto;
+          margin-left: auto;
+          text-align: center;
+        }
+        .navigator-text {
+          display: block;
+          padding: 0.5rem 1rem;
+        }

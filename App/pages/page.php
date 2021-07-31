@@ -5,7 +5,7 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="./style//global.scss">
+      <link rel="stylesheet" href="./style/pageSyle.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
       <title>Document</title>
@@ -27,10 +27,13 @@
                           <a class="nav-link" href="./Chat/practice.php">Register</a>
                      </li>
                      <li class="nav-item">
-                          <a class="nav-link" href="./UploadFile.php">Upload File</a>
+                          <a class="nav-link" href=".http://localhost/WorkList/App/pages/Upload-Image/index.php">Upload File</a>
                      </li>
-                     <li class="nav-tabs">
-                          <a class="navigator-text" href="./Chat/chatroom.php">Chat</a>
+                     <li class="nav-item">
+                          <a class="nav-link" href="./Chat/chatroom.php">Chat</a>
+                     </li>
+                     <li class="nav-item">
+                          <a class="nav-link" href="./contact.php">Contact</a>
                      </li>
                 </ul>
            </nav>

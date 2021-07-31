@@ -73,7 +73,7 @@ if (!$result) {
 				<a class="nav-link" href="./Chat/practice.php">Register</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="./UploadFile.php">Upload File</a>
+				<a class="nav-link" href="http://localhost/WorkList/App/pages/UploadFile.php">Upload File</a>
 			</li>
 		</ul>
 	</nav>
@@ -133,7 +133,33 @@ if (!$result) {
 </form> <br /><br />
 <?php if (isset($_GET['registeration_successfull'])) { ?><?php echo $_GET['registeration_successfull']; ?>
 <?php } ?>
-<a href="./login.php">Login</a>
 
 
 
+<form method="post" action="process.php">
+	<table>
+		<tr>
+			<td colspan="2">
+				<center>
+					<h1>Login</h1>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				Email : </td>
+			<td><input type="text" name="email" /></td>
+		</tr>
+		<tr>
+			<td> Password : </td>
+			<td><input type="password" name="password" /></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<center> <input type="submit" name="loginbtn" />
+			</td>
+		</tr>
+	</table>
+	<?php if (isset($_GET['login_error'])) { ?><?php echo $_GET['login_error']; ?>
+<?php } ?>
+</form>
