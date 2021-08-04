@@ -26,36 +26,31 @@ if ((isset($_POST['submit']))) {
 
 
 <head>
-          <link rel="stylesheet" href="./style/contactStyle.css" type="text/css" media="all" />
+          <link rel="stylesheet" href="./style/contact/style.css" type="text/css" media="all" />
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <link rel="shortcut icon" type="image/x-icon" sizes="192x192" href="../images/Wep_logo.png">
+
+<title>Web App .v1</title>
 </head>
 
-<body>
-          <h2>Contact Us</h2>
-          <div class="navigator-tab">
+<body class="Page-Background">
+          
+          <div class="navigator-tab" ">
 
-                    <nav class="navbar navbar-expand-sm ">
-                              <!-- Brand/logo -->
-                              <a class="navbar-brand" href="#">LOGO</a>
-                              <ul class="navbar-nav">
-                                        <li class="nav-tabs">
-                                                  <a class="nav-link" href="./page.php">Home</a>
-                                        </li>
-                                        <li class="nav-item">
-                                                  <a class="nav-link" href="./Chat/practice.php">Register</a>
-                                        </li>
-                                        <li class="nav-item">
-                                                  <a class="nav-link" href="./UploadFile.php">Upload File</a>
-                                        </li>
-                                        <li class="nav-item">
-                                                  <a class="nav-link" href="./Chat/chatroom.php">Chat</a>
-                                        </li>
-                                        <li class="nav-item">
-                                                  <a class="navigator-text" href="./contact.php">Contact</a>
-                                        </li>
-                              </ul>
-                    </nav>
+<nav class=" navbar navbar-expand-sm ">
+     <!-- Brand/logo -->
+     <a class=" navbar-brand" href="http://localhost/WorkList/App/pages/page.php"><img class="Logo_image" src="../images/Wep_logo.png"></a>
+<ul class=" navbar-nav">
+     <li class="nav-tabs">
+          <a class="navigator-text" href="http://localhost/WorkList/App/pages/page.php"><i class="fa fa-fw fa-home"></i> Back</a>
+     </li>
+   
+   
+</ul>
+</nav>
           </div>
+          <h2>Contact Us</h2>
           <form class="form" action="contact.php" method="POST">
 
                     <p class="username">

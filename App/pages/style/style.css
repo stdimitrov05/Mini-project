@@ -1,0 +1,177 @@
+.clock {
+  color: rgb(250, 248, 248);
+  margin-left: 83%;
+  margin-bottom: 50%;
+  position: absolute;
+  top: 5px;
+  right: 16px;
+  width: 170px;
+  height: 170px;
+  background-image: url(https://media.tenor.com/images/687a659291cde478cbd9443497529b5f/tenor.gif);
+  background-size: cover;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.clock .number {
+  --rotation: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--rotation));
+  font-size: 19px;
+}
+
+.clock .number1 {
+  --rotation: 31deg;
+}
+.clock .number2 {
+  --rotation: 60deg;
+}
+.clock .number3 {
+  --rotation: 90deg;
+}
+.clock .number4 {
+  --rotation: 120deg;
+}
+.clock .number5 {
+  --rotation: 150deg;
+}
+.clock .number6 {
+  --rotation: 180deg;
+}
+.clock .number7 {
+  --rotation: 210deg;
+}
+.clock .number8 {
+  --rotation: 240deg;
+}
+.clock .number9 {
+  --rotation: 270deg;
+}
+.clock .number10 {
+  --rotation: 300deg;
+}
+.clock .number11 {
+  --rotation: 330deg;
+}
+
+.clock .hand {
+  --rotation: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  border: 1px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform-origin: bottom;
+  z-index: 10;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.clock::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(14, 13, 13, 0.527);
+  z-index: 11;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.clock .hand.second {
+  width: 3px;
+  height: 35%;
+  background-color: rgb(255, 255, 255);
+}
+
+.clock .hand.minute {
+  width: 7px;
+  height: 35%;
+  background-color: rgb(252, 249, 249);
+}
+
+.clock .hand.hour {
+  width: 10px;
+  height: 25%;
+  background-color: rgb(255, 255, 255);
+}
+
+.navigator-tab {
+  width: 100%;
+  background-color: #4644444d;
+  display: block;
+  position: relative;
+  margin-bottom: 2.5%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+.navigator-text {
+  display: block;
+  padding: 0.5rem 1rem;
+}
+.Logo_image {
+  z-index: 11;
+  width: 50px;
+  height: 55px;
+  top: 50%;
+  left: -83%;
+  border-radius: 100%;
+}
+.Page-Background {
+  background-image: url(https://images.pexels.com/photos/614117/pexels-photo-614117.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  overflow: hidden;
+}
+.report-container {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  padding: 2px 4px 4px 4px;
+  border-radius: 2px;
+  width: 150px;
+  top: 65%;
+  left: 2%;
+  margin: 0 auto;
+}
+
+.weather-icon {
+  border: #fcf5f5;
+  vertical-align: middle;
+  margin-left: 35%;
+}
+
+.weather-forecast {
+  color: #fcf5f5;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 20px 0px;
+}
+
+span.min-temperature {
+  margin-left: 15px;
+  color: #fffdfd;
+}
+
+.time {
+  line-height: 25px;
+}
+.time-info {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 25%;
+  left: 89%;
+}
+.robot-hi {
+  position: absolute;
+ width: 10%;
+ height: 20%;
+}
+h1{
+  color: #fcf5f5;
+}
+

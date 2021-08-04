@@ -12,5 +12,5 @@ $sql = "INSERT INTO student (fname, mname, lname, address, email, `uploaded`)
 VALUES ('$fname', '$mname', '$lname', '$address', '$email' ,NOW())";
 
 $conn->exec($sql);
-echo "<script>alert('Account successfully added!'); window.location='index.php'</script>";
+echo "<script>alert('Account successfully added!'); window.location='home.php'</script>";
 ?>

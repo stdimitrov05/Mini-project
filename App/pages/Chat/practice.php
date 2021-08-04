@@ -55,29 +55,31 @@ if (!$result) {
 <?php if (isset($_GET['logout_successfully'])) { ?><?php echo $_GET['logout_successfully']; ?>
 <?php } ?>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
+<link rel="stylesheet" href="style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link rel="shortcut icon" type="image/x-icon" sizes="192x192" href="../../images/Wep_logo.png">
 
-<div class="navigator-tab">
+<title>Web App .v1</title>
+<body class="Page-Background">
+	
 
-	<nav class="navbar navbar-expand-sm bg-secondary">
-		<!-- Brand/logo -->
-		<a class="navbar-brand" href="#">LOGO</a>
-		<ul class="navbar-nav">
-			<li class="nav-item">
-				<a class="navigator-text" href="http://localhost/WorkList/App/pages/page.php">Home</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="./Chat/practice.php">Register</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="http://localhost/WorkList/App/pages/UploadFile.php">Upload File</a>
-			</li>
-		</ul>
-	</nav>
-</div>
+        
+<div class="navigator-tab" ">
+
+<nav class=" navbar navbar-expand-sm ">
+     <!-- Brand/logo -->
+     <a class=" navbar-brand" href="http://localhost/WorkList/App/pages/page.php"><img class="Logo_image" src="../../images/Wep_logo.png"></a>
+<ul class=" navbar-nav">
+     <li class="nav-tabs">
+          <a class="navigator-text" href="http://localhost/WorkList/App/pages/page.php"><i class="fa fa-fw fa-home"></i> Back</a>
+     </li>
+   
+   
+</ul>
+</nav>
+          </div>
 <table>
 	<tr>
 		<td colspan="2">
@@ -163,3 +165,4 @@ if (!$result) {
 	<?php if (isset($_GET['login_error'])) { ?><?php echo $_GET['login_error']; ?>
 <?php } ?>
 </form>
+</body>

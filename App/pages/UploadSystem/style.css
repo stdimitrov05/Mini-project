@@ -1,0 +1,42 @@
+.fixed-bottom {
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          background-color: lightseagreen;
+          color: white;
+          text-align: center;
+          padding: 25px;
+          font-size: 20px;
+      }
+  
+      .navigator-tab {
+          width: 100%;
+          background-color: #ffffff00;
+          display: block;
+          position: relative;
+          margin-bottom: 2.5%;
+          margin-right: auto;
+          margin-left: auto;
+          text-align: center;
+      }
+  
+      .navigator-text {
+          display: block;
+          padding: 0.5rem 1rem;
+      }
+      .Logo_image {
+    z-index: 11;
+    width: 50px;
+    height: 55px;
+    top: 50%;
+    left: -83%;
+    border-radius: 100%;
+  }
+  .Page-Background {
+    background-image: url(https://images.pexels.com/photos/614117/pexels-photo-614117.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+    overflow: hidden;
+    color: aliceblue;
+    text-align: center;
+  }

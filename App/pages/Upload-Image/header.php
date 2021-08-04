@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+    <link rel="shortcut icon" type="image/x-icon" sizes="192x192" href="../../images/Wep_logo.png">
 
-        <title>Add, Edit, Delete In PHP/MySQL Using PDO</title>
+<title>Web App .v1</title>
 
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="screen">
      

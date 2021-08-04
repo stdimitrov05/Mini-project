@@ -31,7 +31,7 @@ $sql = "INSERT INTO tbl_image (first_name, last_name, image_location , `uploaded
 VALUES ('$fname', '$lname', '$location' , NOW())";
 
 $conn->exec($sql);
-echo "<script>alert('Successfully Added!!!'); window.location='index.php'</script>";
+echo "<script>alert('Successfully Added!!!'); window.location='home.php'</script>";
 // }
 }
 // }
