@@ -114,32 +114,39 @@ WHERE user_email = '$_SESSION[email]';");
 </div>
 <style>
 	#chatbox {
-		
-		height: 500px;
-		width: 1200px;
+		position:absolute;
+		left: 10%;
+		height: 65%;
+		width: 100%;
 
 	}
 
 	#chatarea {
-		width: 950px;
-		height: 400px;
-		border: double;
+		width: 80%;
+		height: 77%;
+		
 		float: left;
 		overflow: auto;
+		background-color: #ffffff08;
 
 	}
 
 	#loginperson {
-		width: 238px;
-		height: 497px;
-		border: double;
+		text-align: center;
+		position:absolute;
+		left: 70%;
+		width: 10%;
+		height: 77%;
+		background-color: #ffffff08;
 		float: right;
 	}
 
 	#textbox {
-		width: 750px;
-		height: 5px;
-		border: double;
+		width:50%;
+		height: 35% ;
+		top: 77%;
+		left: 15%;
+		position:absolute;
 		float: left;
 	}
 

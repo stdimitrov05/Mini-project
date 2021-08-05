@@ -43,10 +43,10 @@
                 <li class="nav-tabs">
                      <a class="navigator-text" href="http://localhost/WorkList/App/pages/page.php"><i class="fa fa-fw fa-home"></i> Home</a>
                 </li>
-               
+
                 <li class="nav-item">
                      <a class="nav-link" href="http://localhost/WorkList/App/pages/UploadSystem/"><i class="fa fa-fw fa-file"></i> Storage </a>
-          
+
                 </li>
                 <li class="nav-item">
                      <a class="nav-link" href="http://localhost/WorkList/App/pages/Chat/chatroom.php"><i class="fa fa-fw fa-wechat"></i> Chat</a>
@@ -77,11 +77,12 @@
       </div>
       <div class="time-info"><?php echo date("jS F, Y", $currentTime); ?></div>
 
-<div >
-     <img class="robot-hi" alt="robot" src="https://th.bing.com/th/id/R.b2a56e43d1634e99037239b06429fe2c?rik=4lr%2bQs3WTQLk8Q&pid=ImgRaw&r=0">
-     <h1 style="text-align: center; color:aliceblue">Welcome to the Web application! </h1>
-     <h2 style="text-align: center; color:aliceblue">Creator St_d05</h2>
-</div>
+      <div>
+           <img class="robot-hi" alt="robot" src="https://th.bing.com/th/id/R.b2a56e43d1634e99037239b06429fe2c?rik=4lr%2bQs3WTQLk8Q&pid=ImgRaw&r=0">
+           <h1 style="text-align: center; color:aliceblue">Welcome to the Web application! </h1>
+           <h2 style="text-align: center; color:aliceblue">Creator St_d05</h2>
+           <h6 style="text-align: center; color:aliceblue; position:absolute; left:45%;top:4%">  The web application is still under development !</h6>
+      </div>
       <div class="report-container">
            <h2><?php echo $data->name; ?> </h2>
            <div class="time">
@@ -113,6 +114,7 @@
            </div>
       </div>
       
+
 
  </body>
 

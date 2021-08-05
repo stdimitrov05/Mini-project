@@ -62,78 +62,79 @@ if (!$result) {
 <link rel="shortcut icon" type="image/x-icon" sizes="192x192" href="../../images/Wep_logo.png">
 
 <title>Web App .v1</title>
-<body class="Page-Background">
-	
 
-        
-<div class="navigator-tab" ">
+<body class="Page-Background">
+
+
+
+	<div class="navigator-tab" ">
 
 <nav class=" navbar navbar-expand-sm ">
      <!-- Brand/logo -->
      <a class=" navbar-brand" href="http://localhost/WorkList/App/pages/page.php"><img class="Logo_image" src="../../images/Wep_logo.png"></a>
-<ul class=" navbar-nav">
-     <li class="nav-tabs">
-          <a class="navigator-text" href="http://localhost/WorkList/App/pages/page.php"><i class="fa fa-fw fa-home"></i> Back</a>
-     </li>
-   
-   
-</ul>
-</nav>
-          </div>
-<table>
-	<tr>
-		<td colspan="2">
-			<center>
-				<h1>Registeration</h1>
-		</td>
-	</tr>
-	<tr>
-		<form method="post" action="insert.php">
-			<td>Name : </td>
-			<td><input type="text" name="name" /></td>
-	</tr>
-	<tr>
-		<td>Email : </td>
-		<td><input type="email" name="email" onBlur="getEmail(this.value)" /></td>
-		<td>
-			<div id="emailDiv"></div>
-		</td>
-	</tr>
-	<tr>
+		<ul class=" navbar-nav">
+			<li class="nav-tabs">
+				<a class="navigator-text" href="http://localhost/WorkList/App/pages/page.php"><i class="fa fa-fw fa-home"></i> Back</a>
+			</li>
+
+
+		</ul>
+		</nav>
+	</div>
+	<table>
+		<tr>
+			<td colspan="2">
+				<center>
+					<h1>Registeration</h1>
+			</td>
+		</tr>
+		<tr>
+			<form method="post" action="insert.php">
+				<td>Name : </td>
+				<td><input type="text" name="name" /></td>
+		</tr>
+		<tr>
+			<td>Email : </td>
+			<td><input type="email" name="email" onBlur="getEmail(this.value)" /></td>
+			<td>
+				<div id="emailDiv"></div>
+			</td>
+		</tr>
+		<tr>
 
 
 
-		<td>country : </td>
-		<td><select name="country">
-				<?php while ($row = mysqli_fetch_assoc($result)) { ?>
-					<option value="<?php echo $row['country_id']; ?>"> <?php echo $row['country_name']; ?>
-					</option>
+			<td>country : </td>
+			<td><select name="country">
+					<?php while ($row = mysqli_fetch_assoc($result)) { ?>
+						<option value="<?php echo $row['country_id']; ?>"> <?php echo $row['country_name']; ?>
+						</option>
 
-				<?php } ?>
-			</select></td>
-		<td>
-			<div id="city_display"></div>
-		</td>
-	</tr>
-	<tr>
+					<?php } ?>
+				</select></td>
+			<td>
+				<div id="city_display"></div>
+			</td>
+		</tr>
+		<tr>
 
-		<td>Password : </td>
-		<td><input type="password" name="pass1" id="pass1" /></td>
-	</tr>
-	<tr><br />
-		<td>Confirm Password : </td>
-		<td><input type="password" name="pass2" id="pass2" onblur="password()" /></td>
-		<td>
-			<div id="cnfrmpass"></div>
-		</td>
-	</tr>
-	<tr>
-		<td colspan="2">
-			<center><input type="submit" name="sbt" />
-		</td>
-</table>
-</form> <br /><br />
-<?php if (isset($_GET['registeration_successfull'])) { ?><?php echo $_GET['registeration_successfull']; ?>
+			<td>Password : </td>
+			<td><input type="password" name="pass1" id="pass1" /></td>
+		</tr>
+		<tr><br />
+			<td>Confirm Password : </td>
+			<td><input type="password" name="pass2" id="pass2" onblur="password()" /></td>
+			<td>
+				<div id="cnfrmpass"></div>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<center><input type="submit" name="sbt" />
+			</td>
+	</table>
+	</form> <br /><br />
+	<?php if (isset($_GET['registeration_successfull'])) { ?><?php echo $_GET['registeration_successfull']; ?>
 <?php } ?>
 
 
